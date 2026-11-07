@@ -36,8 +36,9 @@ h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.1;margin:0;l
 .kicker i{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#fff;font-style:normal;font-size:.7rem}
 .hero h1{font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:700}
 .hero .sub{font-size:1.15rem;color:var(--muted);max-width:50ch;margin:18px 0 24px;font-weight:500}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-size:.9rem;font-weight:600;box-shadow:var(--shadow)}
+.chips{display:flex;flex-wrap:nowrap;gap:10px}
+.chip{white-space:nowrap}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:.84rem;font-weight:600;box-shadow:var(--shadow)}
 .chip svg{width:16px;height:16px;stroke:var(--blue2);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .tent{margin:16px 0 0;font-size:.82rem;color:var(--muted)}
 .hero-art{position:relative}
@@ -97,7 +98,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
 @media(max-width:960px){.tiles,.arc{grid-template-columns:1fr}.people{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:860px){.hero .grid{grid-template-columns:1fr;min-height:0}.hero-art{order:-1;max-width:520px;margin:0 auto}.nav ul li:not(.keep){display:none}}
-@media(max-width:600px){.people{grid-template-columns:repeat(2,1fr)}.question{grid-template-columns:1fr}.question .q{display:none}}
+@media(max-width:600px){.chips{flex-wrap:wrap}.people{grid-template-columns:repeat(2,1fr)}.question{grid-template-columns:1fr}.question .q{display:none}}
 </style>
 </head>
 <body>
