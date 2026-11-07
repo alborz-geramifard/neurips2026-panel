@@ -4,8 +4,11 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agents in Production · NeurIPS 2026 Expo Panel</title>
 <meta name="description" content="Agents in Production: Evals, Harnesses, and the Reinvention of Recommendation. NeurIPS 2026 Expo panel, Sunday December 6, Parkside 2, ICC Sydney.">
-<link rel="icon" href="assets/favicon.png">
-<meta property="og:title" content="Agents in Production: Evals, Harnesses, and the Reinvention of Recommendation"><meta property="og:description" content="NeurIPS 2026 Expo panel · Sunday December 6, 6–7 PM · Parkside 2, ICC Sydney"><meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png"><link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png"><link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="canonical" href="https://alborz-geramifard.com/neurips2026-panel/">
+<meta property="og:title" content="Agents in Production: Evals, Harnesses, and the Reinvention of Recommendation"><meta property="og:description" content="NeurIPS 2026 Expo panel · Sunday December 6, 6–7 PM · Parkside 2, ICC Sydney"><meta property="og:type" content="website"><meta property="og:url" content="https://alborz-geramifard.com/neurips2026-panel/"><meta property="og:image" content="https://alborz-geramifard.com/neurips2026-panel/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Agents in Production: Evals, Harnesses, and the Reinvention of Recommendation"><meta name="twitter:description" content="NeurIPS 2026 Expo panel · Sunday December 6, 6–7 PM · Parkside 2, ICC Sydney"><meta name="twitter:image" content="https://alborz-geramifard.com/neurips2026-panel/assets/og.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1V1ZB8K1T"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N1V1ZB8K1T');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -40,6 +43,14 @@ h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.1;margin:0;l
 .chip{white-space:nowrap}
 .chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:.84rem;font-weight:600;box-shadow:var(--shadow)}
 .chip svg{width:16px;height:16px;stroke:var(--blue2);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.chip em{font-style:normal;color:var(--muted);font-weight:500;margin-left:2px}
+.tz{margin:12px 0 0;font-size:.84rem;color:var(--muted)}
+.share{display:flex;align-items:center;gap:8px;margin-top:18px;flex-wrap:wrap}
+.share>span{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.share a,.share button{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font:inherit;font-size:.84rem;font-weight:600;color:var(--ink);cursor:pointer;box-shadow:var(--shadow)}
+.share a:hover,.share button:hover{border-color:var(--blue2);color:var(--blue);text-decoration:none}
+.share svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.share svg.x{fill:currentColor;stroke:none}
 .tent{margin:16px 0 0;font-size:.82rem;color:var(--muted)}
 .hero-art{position:relative}
 .hero-art img{width:112%;max-width:none;height:auto;display:block;margin-left:-4%;filter:drop-shadow(0 30px 50px rgba(29,78,216,.28));animation:float 7s ease-in-out infinite}
@@ -100,7 +111,16 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
 footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
 @media(max-width:960px){.tiles,.arc{grid-template-columns:1fr}.people{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:860px){.hero .grid{grid-template-columns:1fr;min-height:0}.hero-art{order:-1;max-width:520px;margin:0 auto}.nav ul li:not(.keep){display:none}}
-@media(max-width:600px){.chips{flex-wrap:wrap}.people{grid-template-columns:repeat(2,1fr)}.question{grid-template-columns:1fr}.question .q{display:none}}
+@media(max-width:600px){
+  .wrap{padding:0 18px}
+  .nav .wrap{height:76px}.brand img{width:56px;height:56px}.brand{font-size:1.05rem}
+  .hero{padding:28px 0 12px}.hero h1{font-size:1.75rem}.hero .sub{font-size:1.02rem;margin:14px 0 18px}
+  .chips{flex-wrap:wrap}.chip{padding:7px 11px;font-size:.8rem}
+  .people{grid-template-columns:repeat(2,1fr);gap:12px}.face{width:120px;height:120px}
+  .question{grid-template-columns:1fr;padding:22px}.question .q{display:none}.question p{font-size:1.1rem}
+  .seg{padding:20px}.slido iframe{height:480px}
+  section{padding:44px 0}h2{font-size:1.5rem}
+}
 </style>
 </head>
 <body>
@@ -116,8 +136,15 @@ footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;b
     <p class="sub">Agents are live. Most fail quietly. How do we make them reliable, measurable, and efficient at scale?</p>
     <div class="chips">
       <span class="chip"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Sun, Dec 6, 2026</span>
-      <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6:00 – 7:00 PM</span>
+      <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6:00 – 7:00 PM <em>Sydney time</em></span>
       <span class="chip"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Parkside 2 · <a href="https://neurips.cc/Conferences/2026" target="_blank" rel="noopener">ICC Sydney</a></span>
+    </div>
+    <p class="tz">That's Saturday, December 5, 11 PM – midnight Pacific · Sunday 2 – 3 AM Eastern · Sunday 7 – 8 AM London.</p>
+    <div class="share">
+      <span>Share</span>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://alborz-geramifard.com/neurips2026-panel/" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?text=Agents%20in%20Production%3A%20Evals%2C%20Harnesses%2C%20and%20the%20Reinvention%20of%20Recommendation%20%E2%80%94%20NeurIPS%202026%20Expo%20panel&url=https://alborz-geramifard.com/neurips2026-panel/" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" class="x"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.63 7.58H.48l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41z"/></svg>X</a>
+      <button type="button" id="copy" aria-label="Copy link"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Copy link</span></button>
     </div>
   </div>
   <div class="hero-art"><img src="assets/hero.png" alt="A robot agent ranking user profiles and passing the best match forward"></div>
@@ -186,5 +213,8 @@ footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;b
   </script>
 </div></section>
 
+<script>
+  (function(){var b=document.getElementById('copy');if(!b)return;b.addEventListener('click',function(){navigator.clipboard.writeText(location.href.split('#')[0]).then(function(){var t=b.querySelector('span');t.textContent='Copied';setTimeout(function(){t.textContent='Copy link';},1800);});});})();
+</script>
 </body>
 </html>
