@@ -87,6 +87,17 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;margin-bottom:22px}
 .ask{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.86rem;font-weight:600;color:var(--blue)}
 .ask svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .ask:hover{text-decoration:none;color:var(--blue2)}
+.seg .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.ask{margin-top:0}
+.ask.vote{color:#0e7490}
+.ask.vote:hover{color:#0891b2}
+.qtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.qtab{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:9px 16px;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .15s ease}
+.qtab i{font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-family:"Space Grotesk",sans-serif;font-size:.8rem;font-weight:700;background:var(--blue-soft);color:var(--blue)}
+.qtab:hover{border-color:var(--blue2);color:var(--blue)}
+.qtab.on{background:linear-gradient(90deg,var(--blue),var(--blue2));border-color:transparent;color:#fff;box-shadow:0 10px 24px -12px rgba(29,78,216,.8)}
+.qtab.on i{background:rgba(255,255,255,.22);color:#fff}
+.qpane{display:none}.qpane.on{display:block}
 .poll{margin-top:14px;background:var(--cyan-soft);color:#0e7490;border-radius:12px;padding:10px 12px;font-size:.84rem;font-weight:600;display:flex;gap:8px;align-items:flex-start}
 .poll svg{width:16px;height:16px;flex-shrink:0;margin-top:2px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .qa-note{margin-top:16px;text-align:center;color:var(--muted);font-size:.95rem}
@@ -177,38 +188,60 @@ footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;b
     <div class="seg"><div class="top"><div class="num">1</div><div class="min">12 min</div></div>
       <h3>Agents in the Wild</h3>
       <ul><li>What blocks deployment: reliability, compounding errors, tool misuse, cost, or safety?</li><li>What is solved in research but unsolved in production?</li></ul>
-      <a class="ask" href="#questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg>Submit a question for this segment</a>
+      <div class="poll"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Poll: “Most production agent failures are harness and eval failures, not model failures.”</div>
+      <div class="acts"><a class="ask" href="#questions" data-seg="1" data-view="questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg> Ask a question</a><a class="ask vote" href="#questions" data-seg="1" data-view="polls"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg> Vote in the poll</a></div>
     </div>
     <div class="seg"><div class="top"><div class="num">2</div><div class="min">18 min</div></div>
       <h3>Evals, Harnesses &amp; Optimization</h3>
       <ul><li>How do we evaluate trajectories when success isn't a single label?</li><li>Can simulated users close the offline–online gap?</li><li>What moves the needle: base models, SFT/RL on traces, or scaffolding?</li></ul>
-      <a class="ask" href="#questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg>Submit a question for this segment</a>
+      <div class="poll"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Poll: “Simulated users can close the offline–online gap — trajectory evals don’t need live traffic to be trusted.”</div>
+      <div class="acts"><a class="ask" href="#questions" data-seg="2" data-view="questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg> Ask a question</a><a class="ask vote" href="#questions" data-seg="2" data-view="polls"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg> Vote in the poll</a></div>
     </div>
     <div class="seg"><div class="top"><div class="num">3</div><div class="min">20 min</div></div>
       <h3>RecSys as the Proving Ground</h3>
       <ul><li>Where do agents sit in the retrieval and ranking stack?</li><li>Can they optimize long-term goals and stay measurable?</li><li>From recommending items to executing actions?</li></ul>
-      <div class="poll"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Poll: "Within 3 years, ranking models will be a tool agents call, not the product."</div>
-      <a class="ask" href="#questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg>Submit a question for this segment</a>
+      <div class="poll"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Poll: “Within 3 years, ranking models will be a tool agents call, not the product.”</div>
+      <div class="acts"><a class="ask" href="#questions" data-seg="3" data-view="questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg> Ask a question</a><a class="ask vote" href="#questions" data-seg="3" data-view="polls"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg> Vote in the poll</a></div>
     </div>
   </div>
-  <p class="qa-note">Final 10 minutes: your questions, top-voted on Slido.</p>
+  <p class="qa-note">Final 10 minutes: your questions, top-voted on Slido. Each segment has its own Q&amp;A and poll.</p>
 </div></section>
 
 <section id="questions"><div class="wrap">
-  <div class="eyebrow">Q&amp;A</div><h2>Ask a question. Upvote the best.</h2>
-  <div class="slido" id="slido" data-code="2469026" data-hash="wbQn7rH9odxKf7LbZGkSq4" data-live="yes">
-    <div class="fallback" id="slido-wait"><a class="btn" href="https://app.sli.do/event/wbQn7rH9odxKf7LbZGkSq4" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Event code <b>#2469026</b>. The Q&amp;A opens here shortly before the panel.</span></div>
+  <div class="eyebrow">Q&amp;A &amp; polls</div><h2>Ask a question. Upvote the best. Cast your vote.</h2>
+  <p class="qa-note" style="margin:0 0 18px;text-align:left">Each segment has its own Slido: questions and a poll. Pick a segment below.</p>
+  <div class="qtabs" id="qtabs"><button class="qtab on" type="button" data-seg="1"><i>1</i>Agents in the Wild</button><button class="qtab" type="button" data-seg="2"><i>2</i>Evals, Harnesses &amp; Optimization</button><button class="qtab" type="button" data-seg="3"><i>3</i>RecSys as the Proving Ground</button></div>
+  <div id="qpanes">
+    <div class="qpane on" data-seg="1" data-hash="9svXtx5sZs6YHGgZX7E81n" data-code="2202657">
+      <div class="slido"><div class="fallback"><a class="btn" href="https://app.sli.do/event/9svXtx5sZs6YHGgZX7E81n" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Event code <b>#2202657</b> · Agents in the Wild</span></div></div>
+    </div>
+    <div class="qpane" data-seg="2" data-hash="99tgxbY288CpQKhpz9TuPK" data-code="2369391">
+      <div class="slido"><div class="fallback"><a class="btn" href="https://app.sli.do/event/99tgxbY288CpQKhpz9TuPK" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Event code <b>#2369391</b> · Evals, Harnesses &amp; Optimization</span></div></div>
+    </div>
+    <div class="qpane" data-seg="3" data-hash="swhSALMksRCmAe59yM7haQ" data-code="1552886">
+      <div class="slido"><div class="fallback"><a class="btn" href="https://app.sli.do/event/swhSALMksRCmAe59yM7haQ" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Event code <b>#1552886</b> · RecSys as the Proving Ground</span></div></div>
+    </div>
   </div>
   <script>
     (function(){
-      var box=document.getElementById('slido'),code=box.dataset.code.trim();if(!code||box.dataset.live!=='yes')return;
-      var url='https://app.sli.do/event/'+(box.dataset.hash||code), done=false;
-      function mount(){ if(done)return; done=true;
-        box.innerHTML='<iframe src="'+url+'" title="Slido Q&amp;A" allow="clipboard-write" tabindex="-1"></iframe><div class="fallback"><a class="btn" href="'+url+'" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Or go to slido.com and enter <b>#'+code+'</b>.</span></div>';
-        var y=window.scrollY; setTimeout(function(){ if(Math.abs(window.scrollY-y)>200) window.scrollTo({top:y}); },800); }
-      if('IntersectionObserver' in window){ new IntersectionObserver(function(es,o){ es.forEach(function(e){ if(e.isIntersecting){ mount(); o.disconnect(); } }); },{rootMargin:'300px 0px'}).observe(box); }
-      else mount();
-      document.querySelectorAll('a[href="#questions"]').forEach(function(a){ a.addEventListener('click', mount); });
+      var panes=[].slice.call(document.querySelectorAll('#qpanes .qpane')),tabs=[].slice.call(document.querySelectorAll('#qtabs .qtab'));
+      function url(p,view){return 'https://app.sli.do/event/'+p.dataset.hash+(view?'/live/'+view:'');}
+      function mount(p,view,guard){
+        var box=p.querySelector('.slido'),f=box.querySelector('iframe'),u=url(p,view);
+        if(f){ if(view&&f.getAttribute('src')!==u) f.setAttribute('src',u); return; }
+        var y=window.scrollY;
+        box.innerHTML='<iframe src="'+u+'" title="Slido" allow="clipboard-write" tabindex="-1"></iframe><div class="fallback"><a class="btn" href="'+url(p)+'" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Or go to slido.com and enter <b>#'+p.dataset.code+'</b>.</span></div>';
+        if(guard) setTimeout(function(){ if(Math.abs(window.scrollY-y)>200) window.scrollTo({top:y}); },800);
+      }
+      function show(n,view){
+        tabs.forEach(function(t){t.classList.toggle('on',t.dataset.seg==n);});
+        panes.forEach(function(p){var on=p.dataset.seg==n;p.classList.toggle('on',on);if(on)mount(p,view);});
+      }
+      tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.seg);});});
+      document.querySelectorAll('a[href="#questions"]').forEach(function(a){a.addEventListener('click',function(){show(a.dataset.seg||1,a.dataset.view);});});
+      var wrap=document.getElementById('qpanes');
+      if('IntersectionObserver' in window){ new IntersectionObserver(function(es,o){ es.forEach(function(e){ if(e.isIntersecting){ mount(panes[0],null,true); o.disconnect(); } }); },{rootMargin:'300px 0px'}).observe(wrap); }
+      else mount(panes[0]);
     })();
   </script>
 </div></section>
