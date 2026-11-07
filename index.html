@@ -168,13 +168,13 @@ footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;b
 
 <section id="questions"><div class="wrap">
   <div class="eyebrow">Q&amp;A</div><h2>Ask a question. Upvote the best.</h2>
-  <div class="slido" id="slido" data-code="2469026" data-live="no">
-    <div class="fallback" id="slido-wait"><a class="btn" href="https://app.sli.do/event/2469026" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Event code <b>#2469026</b>. The Q&amp;A opens here shortly before the panel.</span></div>
+  <div class="slido" id="slido" data-code="2469026" data-hash="wbQn7rH9odxKf7LbZGkSq4" data-live="yes">
+    <div class="fallback" id="slido-wait"><a class="btn" href="https://app.sli.do/event/wbQn7rH9odxKf7LbZGkSq4" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Event code <b>#2469026</b>. The Q&amp;A opens here shortly before the panel.</span></div>
   </div>
   <script>
     (function(){
       var box=document.getElementById('slido'),code=box.dataset.code.trim();if(!code||box.dataset.live!=='yes')return;
-      var url='https://app.sli.do/event/'+code, done=false;
+      var url='https://app.sli.do/event/'+(box.dataset.hash||code), done=false;
       function mount(){ if(done)return; done=true;
         box.innerHTML='<iframe src="'+url+'" title="Slido Q&amp;A" allow="clipboard-write" tabindex="-1"></iframe><div class="fallback"><a class="btn" href="'+url+'" target="_blank" rel="noopener">Open Slido ↗</a><span style="color:var(--muted);font-size:.9rem">Or go to slido.com and enter <b>#'+code+'</b>.</span></div>';
         var y=window.scrollY; setTimeout(function(){ if(Math.abs(window.scrollY-y)>200) window.scrollTo({top:y}); },800); }
