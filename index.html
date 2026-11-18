@@ -81,6 +81,7 @@ h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;margin-bottom:22px}
 .seg .num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.2rem;color:#fff;background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 10px 20px -10px rgba(29,78,216,.8)}
 .seg .min{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .seg h3{font-size:1.15rem;margin-bottom:10px}
+.seg .leads{margin:-4px 0 12px;font-size:.8rem;color:var(--muted)}.seg .leads b{color:var(--blue);font-weight:700}
 .seg ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
 .seg li{position:relative;padding-left:18px;font-size:.95rem;color:var(--muted)}
 .seg li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--blue2),var(--cyan))}
@@ -174,7 +175,7 @@ footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;b
 </div></section>
 
 <section id="panelists"><div class="wrap">
-  <div class="eyebrow">People</div><h2>Panelists <span class="tag">Tentative</span></h2>
+  <div class="eyebrow">People</div><h2>Panelists</h2>
   <div class="people">
     <a class="person mod" href="https://alborz-geramifard.com/" target="_blank" rel="noopener"><img class="face" src="assets/people/alborz-geramifard.png" alt=""><div><div class="role">Moderator</div><b>Alborz Geramifard</b><span>LinkedIn</span></div></a>
     <a class="person" href="https://www.linkedin.com/in/agrover10/" target="_blank" rel="noopener"><img class="face" src="assets/people/aman-grover.png" alt=""><div><div class="role">Production agent builder</div><b>Aman Grover</b><span>LinkedIn</span></div></a>
@@ -189,18 +190,21 @@ footer::before{content:"";position:absolute;top:-1px;left:0;right:0;height:3px;b
   <div class="arc">
     <div class="seg"><div class="top"><div class="num">1</div><div class="min">12 min</div></div>
       <h3>Agents in the Wild</h3>
+      <div class="leads">Led by <b>Aman Grover</b> · with Xiaofeng Wang</div>
       <ul><li>What blocks deployment: reliability, compounding errors, tool misuse, cost, or safety?</li><li>What is solved in research but unsolved in production?</li></ul>
       <div class="poll"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Poll: What is the biggest barrier to agents being effective in production?</div>
       <div class="acts"><a class="ask" href="#questions" data-seg="1" data-view="questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg> Ask a question</a><a class="ask vote" href="#questions" data-seg="1" data-view="polls"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg> Vote in the poll</a></div>
     </div>
     <div class="seg"><div class="top"><div class="num">2</div><div class="min">18 min</div></div>
       <h3>Evals, Harnesses &amp; Optimization</h3>
+      <div class="leads">Led by <b>Kiran Lakkaraju</b> · with George Karypis</div>
       <ul><li>How do we evaluate trajectories when success isn't a single label?</li><li>Can simulated users close the offline–online gap?</li><li>What moves the needle: base models, SFT/RL on traces, or scaffolding?</li></ul>
       <div class="poll"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Poll: Would you ship an agent that only passed simulated-user evals?</div>
       <div class="acts"><a class="ask" href="#questions" data-seg="2" data-view="questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg> Ask a question</a><a class="ask vote" href="#questions" data-seg="2" data-view="polls"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg> Vote in the poll</a></div>
     </div>
     <div class="seg"><div class="top"><div class="num">3</div><div class="min">20 min</div></div>
       <h3>RecSys as the Proving Ground</h3>
+      <div class="leads">Led by <b>George Karypis</b> · with Xiaofeng Wang</div>
       <ul><li>Where do agents sit in the retrieval and ranking stack?</li><li>Can they optimize long-term goals and stay measurable?</li><li>From recommending items to executing actions?</li></ul>
       <div class="poll"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>Poll: In 3 years, what ranks your feed?</div>
       <div class="acts"><a class="ask" href="#questions" data-seg="3" data-view="questions"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/><path d="M9.5 10.5h5M9.5 13.5h3"/></svg> Ask a question</a><a class="ask vote" href="#questions" data-seg="3" data-view="polls"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg> Vote in the poll</a></div>
